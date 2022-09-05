@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nzube Ufodike</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
   <body>
-
     <header>
       <div class="menu-btn"></div>
       <div class="navigation">
@@ -22,5 +20,33 @@
         </div>
       </div>
     </header>
-</body>
+
+    <section class="home" style="background-image: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(0, 0, 51, 0.89)); background-repeat: no-repeat; background-size: cover;">
+      <div class="content">
+        
+      </div>
+      <div class="media-icons">
+        <a href="https://uk.linkedin.com/in/nzube"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/nzube.inclusive/?hl=en"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/nzube?lang=en"><i class="fab fa-twitter"></i></a>
+      </div>
+    
+
+    <footer>
+    </footer>
+
+  </section>
+  <script>
+
+    //Responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+      </script>
+  </body>
 </html>

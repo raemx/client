@@ -36,17 +36,6 @@ header .navigation .navigation-items a{
   transition: 0.3s ease;
 }
 
-/* header .navigation .navigation-items a:before{
-  content: '';
-  position: absolute;
-  background: white;
-  width: 0;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  transition: 0.3s ease;
-} */
-
 header .navigation .navigation-items a:hover:before{
   width: 20%;
 }
@@ -68,31 +57,6 @@ section{
   align-items: center;
   justify-content: center;
   min-height: 50vh;
-}
-
-
-.intro{
-  color: white;
-  font-size: 4em;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  line-height: 75px;
-  display: flex;
-  justify-content: center;
-}
-
-.typing{
-  position: relative;
-}
-
-.typing::after{
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  border-right: 2px solid white;
-  animation: blink 0.5s infinite ease;
 }
 
 @keyframes blink{
@@ -224,20 +188,9 @@ section{
     transition: 0.3s ease;
   }
 
-  .typing::after{
-    height: 100%;
-  }
 }
 
 @media (max-width: 560px){
-  .home .content h1{
-    font-size: 1em;
-    line-height: 60px;
-  }
-  .typing::after{
-    height: 100%;
-  }
-
 
 }
       
