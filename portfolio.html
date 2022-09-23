@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nzube Ufodike</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    
+    <header>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="journey.html">Journey</a>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+          <a href="media.html">Media</a>
+        </div>
+      </div>
+    </header>
+
+  
+    <section class="home" style="background: rgb(0, 0, 0); background-repeat: no-repeat; background-size: 450px; height: 100%; width: 100%;">
+
+    </section>
+
+    <svg id="visual polka" viewBox="0 0 1560 300" width="1560" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1560" height="300" fill="#FFFFFF"></rect><g fill="#000000"><circle r="167" cx="856" cy="49"></circle><circle r="73" cx="306" cy="90"></circle><circle r="152" cx="1397" cy="20"></circle><circle r="74" cx="1125" cy="250"></circle><circle r="97" cx="6" cy="276"></circle></g></svg>
+
+    <section>
+    
+    </section>
+    
+
+      <div class="media-icons">
+        <a href="https://uk.linkedin.com/in/nzube"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/nzube.inclusive/?hl=en"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/nzube?lang=en"><i class="fab fa-twitter"></i></a>
+      </div>
+
+  <script>
+
+    //Show columns
+    const pagecontain = document.querySelector('.page-contain');
+    const add = document.querySelector('#add');
+
+    add.addEventListener('click', () => {
+      pagecontain.classList.add('show');
+    })
+
+     
+    //Typewriter effect
+    const texts = ['NZUBE UFODIKE', 'INVESTOR', 'ENTREPRENEUR', 'TV PRODUCER', 'DIRECTOR'];
+      let count = 0;
+      let index = 0;
+      let text = "";
+      let l = "";
+      
+      (function type(){
+          if (count === texts.length){
+              count = 0;
+          }
+          text = texts[count]
+          l = text.slice(0, ++index);
+      
+          document.querySelector(".typing").textContent = l;
+          if (l.length === text.length){
+              count++;
+              index = 0;
+          }
+          setTimeout(type, 450);
+      }());
+
+    //Responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+
+      </script>
+  </body>
+</html>

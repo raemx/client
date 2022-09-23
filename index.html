@@ -15,11 +15,11 @@
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          <a href="index.html">Home</a>
-          <a href="about.html">Portfolio</a>
           <a href="journey.html">Journey</a>
-          <a href="speak.html">Speaking Engagements</a>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
           <a href="contact.html">Contact</a>
+          <a href="media.html">Media</a>
         </div>
       </div>
     </header>
@@ -31,12 +31,18 @@
       </div>
     </section>
 
-    <svg id="visual polka" viewBox="0 0 1560 300" width="1560" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1560" height="300" fill="#FFFFFF"></rect><g fill="#000000"><circle r="167" cx="856" cy="49"></circle><circle r="73" cx="306" cy="90"></circle><circle r="152" cx="1397" cy="20"></circle><circle r="74" cx="1125" cy="250"></circle><circle r="97" cx="6" cy="276"></circle></g></svg>
 
+    <section class="black">
+      <div class="custom-shape-divider-top-1658364333">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
+          </svg>
+      </div>
+   </section>
     <section class="page-containt">
-      <div class="data-card">
+      <div class="data-card reveal">
         <h3>Nzube Ufodike</h3>
-        <img src="img/three.jpg" alt="..." style="height: 300px; width: 400px; margin-bottom: 1em;">
+        <img src="img/three.jpg" alt="..." style=" height: 300px; width: 400px; margin-bottom: 1em;">
         <h4>Entrepreneur with over 20 years experience</h4>
         <p>He is an advisor to early and growth stage businesses, in the UK and emerging markets.</p>
         <span class="link-text">
@@ -63,6 +69,8 @@
         <img src="img/friend.jpg" alt="..." style="height: 300px; width: 400px; margin-bottom: 1em;">
       </div>
     </section>
+    <svg  id="visual polka" viewBox="0 0 1560 300" width="1560" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1560" height="300" fill="#FFFFFF"></rect><g fill="#000000"><circle r="167" cx="856" cy="49"></circle><circle r="73" cx="306" cy="90"></circle><circle r="152" cx="1397" cy="20"></circle><circle r="74" cx="1125" cy="250"></circle><circle r="97" cx="6" cy="276"></circle></g></svg>
+    
     
 
       <div class="media-icons">
@@ -72,6 +80,26 @@
       </div>
 
   <script>
+
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 50;
+
+        if(revealtop < windowheight - revealpoint){
+          reveals[i].classList.add('active');
+        }
+        else{
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
 
     //Show columns
     const pagecontain = document.querySelector('.page-contain');
