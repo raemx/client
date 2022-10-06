@@ -11,7 +11,7 @@
   <body class="contact">
 
     
-    <header style="background: black;">
+    <header>
       <div class="menu-btn">
       <div class="navigation">
         <div class="navigation-items">
@@ -23,164 +23,16 @@
         </div>
       </div>
     </header>
-    
-    <section>
-        <div class="background">
-        <div class="container">
-            <div class="screen">
-              <div class="screen-header">
-                <div class="screen-header-left">
-                  <div class="screen-header-button close"></div>
-                  <div class="screen-header-button maximize"></div>
-                  <div class="screen-header-button minimize"></div>
-                </div>
-                <div class="screen-header-right">
-                  <div class="screen-header-ellipsis"></div>
-                  <div class="screen-header-ellipsis"></div>
-                  <div class="screen-header-ellipsis"></div>
-                </div>
-              </div>
-              <div class="screen-body">
-                <div class="screen-body-item left">
-                  <div class="app-title">
-                    <span>CONTACT</span>
-                    <span>ME</span>
-                  </div>
-                  <div class="app-contact">Contact me on: +44 (0)78 3014 3489</div>
-                  <div  style="font-size: 16px; margin-top: 0.5em;">Chat with me: https://calendly.com/nzube_/quick-chat</div>
-                  <div class="app-contact"><img src="img/task.jpg" alt="..." style="height: 300px; width: 400px; margin-top: 3em; "></div>
-                </div>
-                <div class="screen-body-item">
-                  <div class="app-form">
-                    <div class="app-form-group">
-                      <input class="app-form-control" placeholder="NAME">
-                    </div>
-                    <div class="app-form-group">
-                      <input class="app-form-control" placeholder="EMAIL">
-                    </div>
-                    <div class="app-form-group">     
-                    <label for="reason">Choose a reason:</label>
-                    <select  class="app-form-control" name="reason" id="reason">
-                      <option value="other">Other</option>
-                      <option value="speak">Speaking Engagement</option>
-                      <option value="consult">Consultation</option>
-                    </select>
-                    </div>
-
-                    <!-- <div class="app-form-group">
-                        <div class="dropdown">
-                            <button class="dropbtn">REASON</button>
-                            <div class="dropdown-content">
-                              <a href="#">Book a Speaking Engagement</a>
-                              <a href="#">Consultation</a>
-                            </div>
-                          </div>
-                    </div> -->
-                    <div class="app-form-group message">
-                      <input class="app-form-control" placeholder="MESSAGE">
-                    </div>
-                    <div class="app-form-group buttons">
-                      <button class="app-form-button" href="mailto:rachel.oyoo1@gmail.com">SEND</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-    </section>
-
+ 
+   
   
       <div class="media-icons">
         <a href="https://uk.linkedin.com/in/nzube"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.instagram.com/nzube.inclusive/?hl=en"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/nzube?lang=en"><i class="fab fa-twitter"></i></a>
       </div>
-
-  <script>
-
-    window.addEventListener('scroll', reveal);
-
-    function reveal(){
-      var reveals = document.querySelectorAll('.reveal');
-
-      for(var i = 0; i < reveals.length; i++){
-
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if(revealtop < windowheight - revealpoint){
-          reveals[i].classList.add('active');
-        }
-        else{
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-
-    
-    window.addEventListener('scroll', reveal2);
-
-    function reveal2(){
-      var reveals = document.querySelectorAll('.reveal2');
-
-      for(var i = 0; i < reveals.length; i++){
-
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 5;
-
-        if(revealtop < windowheight - revealpoint){
-          reveals[i].classList.add('active');
-        }
-        else{
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-
-    //Show columns
-    const pagecontain = document.querySelector('.page-contain');
-    const add = document.querySelector('#add');
-
-    add.addEventListener('click', () => {
-      pagecontain.classList.add('show');
-    })
-
-     
-    //Typewriter effect
-    const texts = ['NZUBE UFODIKE', 'INVESTOR', 'ENTREPRENEUR', 'TV PRODUCER', 'DIRECTOR'];
-      let count = 0;
-      let index = 0;
-      let text = "";
-      let l = "";
       
-      (function type(){
-          if (count === texts.length){
-              count = 0;
-          }
-          text = texts[count]
-          l = text.slice(0, ++index);
-      
-          document.querySelector(".typing").textContent = l;
-          if (l.length === text.length){
-              count++;
-              index = 0;
-          }
-          setTimeout(type, 450);
-      }());
 
-    //Responsive navigation menu
-    const menuBtn = document.querySelector(".menu-btn");
-    const navigation = document.querySelector(".navigation");
-
-    menuBtn.addEventListener("click", () => {
-      menuBtn.classList.toggle("active");
-      navigation.classList.toggle("active");
-    });
-
-
-      </script>
+<script src="home.js"></script>
   </body>
 </html>

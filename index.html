@@ -11,7 +11,7 @@
   <body>
 
     
-    <header>
+    <header class="main">
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
@@ -26,7 +26,7 @@
 
     <!-- style="background-image: linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(0, 0, 51, 0.73)), url('img/people.jpeg'); background-repeat: no-repeat; background-size: cover;" -->
     <section class="home" style="background: url('img/prof1.png'), rgb(0, 0, 0); background-repeat: no-repeat; background-size: 450px; height: 100%; width: 100%;">
-      <div class="content intro">
+      <div class=" intro">
         <h1 class="typing">Nzube Ufodike</h1>
       </div>
     </section>
@@ -78,70 +78,11 @@
         <a href="https://www.instagram.com/nzube.inclusive/?hl=en"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/nzube?lang=en"><i class="fab fa-twitter"></i></a>
       </div>
-
-  <script>
-
-    window.addEventListener('scroll', reveal);
-
-    function reveal(){
-      var reveals = document.querySelectorAll('.reveal');
-
-      for(var i = 0; i < reveals.length; i++){
-
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 50;
-
-        if(revealtop < windowheight - revealpoint){
-          reveals[i].classList.add('active');
-        }
-        else{
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-
-    //Show columns
-    const pagecontain = document.querySelector('.page-contain');
-    const add = document.querySelector('#add');
-
-    add.addEventListener('click', () => {
-      pagecontain.classList.add('show');
-    })
-
-     
-    //Typewriter effect
-    const texts = ['NZUBE UFODIKE', 'INVESTOR', 'ENTREPRENEUR', 'TV PRODUCER', 'DIRECTOR'];
-      let count = 0;
-      let index = 0;
-      let text = "";
-      let l = "";
       
-      (function type(){
-          if (count === texts.length){
-              count = 0;
-          }
-          text = texts[count]
-          l = text.slice(0, ++index);
-      
-          document.querySelector(".typing").textContent = l;
-          if (l.length === text.length){
-              count++;
-              index = 0;
-          }
-          setTimeout(type, 450);
-      }());
+      <footer>
+        <p>Copyright All Rights Reserved © 2022</p>
+      </footer>
 
-    //Responsive navigation menu
-    const menuBtn = document.querySelector(".menu-btn");
-    const navigation = document.querySelector(".navigation");
-
-    menuBtn.addEventListener("click", () => {
-      menuBtn.classList.toggle("active");
-      navigation.classList.toggle("active");
-    });
-
-
-      </script>
+      <script src="home.js"></script>
   </body>
 </html>
