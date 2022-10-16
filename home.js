@@ -7,6 +7,10 @@ menuBtn.addEventListener("click", () => {
   navigation.classList.toggle("active");
 });
 
+
+
+
+
 window.addEventListener('scroll', reveal);
 
 function reveal(){
@@ -26,6 +30,9 @@ function reveal(){
     }
   }
 }
+
+
+
 
    
 window.addEventListener('scroll', reveal2);
@@ -92,3 +99,4 @@ const texts = ['NZUBE UFODIKE', 'INVESTOR', 'ENTREPRENEUR', 'TV PRODUCER', 'DIRE
   
   }
 }
+
