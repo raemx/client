@@ -713,6 +713,29 @@ footer p{
 }
       
 /******************************************************* JOURNEY *****************************************************/
+.bubble::after{
+  content: '';
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 10em;
+  height: 25%;
+  width: 100%;
+  background-color: black;
+}
+
+.bubble2::after{
+  content: '';
+  border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+  position: absolute;
+  left: 0;
+  height: 15%;
+  width: 100%;
+  background-color: black;
+}
+
 
 header.other {
   background-color: white; 
@@ -729,10 +752,7 @@ header.other .navigation .navigation-items a{
 
 .container.journey{
   margin-top: 20em;
-  /* padding: 2rem;
-  padding-top: 20em;
-  margin-top: 200px;
-  margin: 0 auto; */
+
   margin-bottom: -50px;
   color: white;
   padding-bottom: -50px;
@@ -749,17 +769,6 @@ header.other .navigation .navigation-items a{
   background-color: black;
 }
 
-.bubble::after{
-  content: '';
-  border-top-left-radius: 100% 100%;
-  border-top-right-radius: 100% 100%;
-  position: absolute;
-  left: 0;
-  top: 10em;
-  height: 25%;
-  width: 100%;
-  background-color: #000;
-}
 
 /* .container.journey.circle, .top-section h1 p{
   color: black;
@@ -792,16 +801,6 @@ h1{
   font-size: 1em;
 }
 
-.bubble2::after{
-  content: '';
-  border-bottom-left-radius: 100% 100%;
-  border-bottom-right-radius: 100% 100%;
-  position: absolute;
-  left: 0;
-  height: 15%;
-  width: 100%;
-  background-color: black;
-}
 
 
 .timeline{
@@ -881,7 +880,7 @@ h1{
 .show-me:nth-child(n){
   transform: none;
   opacity: 1;
-}
+} 
 
 .media-icons.tl{
   padding-top: 5em;
@@ -895,6 +894,66 @@ h1{
 footer.tl p{
   background-color: white;
   color: black;
+}
+
+/***********************JOURNEY2***************/
+
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&subset=cyrillic");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  line-height: 1.5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 16.66% 50px;
+  width: 100%;
+}
+
+article {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.timeline__nav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  transition: top 0.3s ease-out;
+}
+.timeline__nav ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 15px 0;
+}
+.timeline__nav ul li {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style-type: none;
+  color: #bfc1c3;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.timeline__nav ul li.active {
+  font-weight: bold;
+  color: #f94125;
+  border-bottom: 1px dotted transparent;
+  transform: scale(1.2);
+}
+.timeline__nav ul li:hover {
+  color: #000;
 }
 
 
@@ -1078,34 +1137,17 @@ section .content{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
 }
 
 .card {
-
-    min-height: 400px;
-    background-color: white;
-    background-color: white;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
-    border: 2px solid rgba(7, 7, 7, 0.12);
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer;
-    border-radius:50%;
-/* 
   width: 100%;
   max-width: 300px;
   min-width: 400px;
   min-height: 400px;
   background-color: white;
   margin: 10px;
+  /* margin-left: 50px;
+  margin-right: 50px; */
   border-radius: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
   border: 2px solid rgba(7, 7, 7, 0.12);
@@ -1117,7 +1159,7 @@ section .content{
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  border-radius:50%; */
+  border-radius:50%;
   
 }
 
@@ -1314,18 +1356,6 @@ section .content{
 
 }
 
-section.c{
-    padding: 0;
-}
-
-.container.portfolio{
-    width: 100%;
-}
-
-section.c .row .col-sm{
-    align-items: center;
-    justify-content: center;
-}
 @media screen and (max-width: 767px) {
   .wrapper {
     height: 700px;
@@ -1650,4 +1680,5 @@ label{
             </div>
           </div>
           </div>
-    </section> */
+    </section>
+*/

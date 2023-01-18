@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nzube Ufodike</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <style>
+  /*******************Media*****************/
+
+.jumbotron {
+  /* padding: 100px 400px; */
+  text-align: center;
+  /* margin-bottom: 20em; */
+  /* background-color: black; */
+  margin-top: 10em;
+  position: relative;
+  /* letter-spacing: 15px; */
+  background-image: url('img/news.jpg');
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+ -webkit-filter: grayscale(100%);
+ -moz-filter: grayscale(100%);
+ -ms-filter: grayscale(100%);
+ filter: grayscale(100%);
+ filter: gray; /* IE 6-9 */
+  opacity: 0.45;
+  color: white;
+}
+
+.display4{
+  font-size: 5.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+
+}
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="journey.html">Journey</a>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+          <a href="media2.html">Media</a>
+        </div>
+      </div>
+    </header>
+
+    
+    <!-- <section class="jumbotron">
+      <div class="intro4">
+        <h4>MEDIA</h4>
+      </div>
+    </section> -->
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Media</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div>
+</div>
+    
+    <div class="media-icons">
+      <a href="https://uk.linkedin.com/in/nzube"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/nzube.inclusive/?hl=en"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/nzube?lang=en"><i class="fab fa-twitter"></i></a>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+  function open() {
+    var x = document.getElementById("page-contain");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+      
+
+  //Responsive navigation menu
+  const menuBtn = document.querySelector(".menu-btn");
+  const navigation = document.querySelector(".navigation");
+
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+  });
+
+
+    </script>
