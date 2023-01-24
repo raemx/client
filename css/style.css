@@ -355,14 +355,13 @@ svg{
 #add{
   background-color: black;
   color: white;
-  border: none;
-  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 25px;
+  border: 1px white solid;
 }
 
 
@@ -566,6 +565,18 @@ svg{
   color: #00acee;
 }
 /******************Footer***********************/
+
+footer p{
+  z-index: 888;
+  width: 100%;
+  display: flex;
+  transition: 0.5s ease;
+  font-size: 1em;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  padding-bottom: 0.5em;
+}
 
 footer p{
   z-index: 888;

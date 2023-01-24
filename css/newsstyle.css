@@ -42,6 +42,20 @@
   box-sizing: border-box;
 }
 
+.media-icons.n{
+  z-index: 888;
+  /* position: absolute; */
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s ease;
+  font-size: 2em;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 1em;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -592,7 +606,13 @@ pre code {
   overflow-y: scroll;
 }
 
-.container,
+.container{
+  background-color: #000000;
+  padding: 2em 2em;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 25px;
+}
 .container-fluid,
 .container-sm,
 .container-md,
@@ -603,7 +623,7 @@ pre code {
   padding-left: 0.5rem;
   margin-right: auto;
   margin-left: auto;
-  background-color: black;
+  /* background-color: black; */
   padding-bottom: 2em;
   
 }
@@ -4026,7 +4046,7 @@ input[type="button"].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin: 3em 3em;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4646,6 +4666,7 @@ input[type="button"].btn-block {
   line-height: 1;
   text-align: center;
   white-space: nowrap;
+  border-radius: 25px;
   vertical-align: baseline;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -9523,13 +9544,18 @@ h6,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #1E2024;
-  background: #FFCC00;
+  background: #ffffff;
+  border-radius: 25px;
 }
 
 @media (max-width: 991.98px) {
   .navbar-dark .navbar-nav .nav-link {
     padding: 8px 15px;
   }
+}
+
+.main-carousel{
+  background-color: black;
 }
 
 .main-carousel .owl-dots {
@@ -9539,6 +9565,7 @@ h6,
   width: 100%;
   height: 20px;
   text-align: right;
+  
 }
 
 .main-carousel .owl-dot {
@@ -9547,13 +9574,13 @@ h6,
   margin: 0 5px;
   width: 20px;
   height: 20px;
-  background: #FFFFFF;
+  background: #FFFfFF;
   transition: .5s;
 }
 
 .main-carousel .owl-dot.active {
   width: 40px;
-  background: #FFCC00;
+  background: black;
 }
 
 .tranding-carousel .owl-nav {
@@ -9609,7 +9636,8 @@ h6,
   justify-content: space-between;
   background: #FFFFFF;
   border: 1px solid #dee2e6;
-  border-left: 5px solid #FFCC00;
+  border-left: 5px solid #31404B;
+  border-radius: 25px;
 }
 
 .news-carousel .owl-nav {

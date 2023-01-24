@@ -1,61 +1,6 @@
 <!DOCTYPE html>
-<head>
-<meta charset="utf-8">
-<title>Contact form submission</title>
-</head>
-<body>
-
-
-<?php
-
-$errors = [];
-$errorMessage = '';
-
-if (!empty($_POST)) {
-   $name = $_POST['name'];
-   $email = $_POST['email'];
-   $message = $_POST['message'];
-   $contact =$_POST['contact'];
-   $company =$_POST['company'];
-
-   if (empty($name)) {
-       $errors[] = 'Name is empty';
-   }
-
-   if (empty($email)) {
-       $errors[] = 'Email is empty';
-   } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-       $errors[] = 'Email is invalid';
-   }
-
-   if (empty($message)) {
-       $errors[] = 'Message is empty';
-   }
-
-   if (empty($errors)) {
-       $toEmail = 'rachel@amoo.com';
-       $emailSubject = 'New email from your contact form';
-       $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
-       $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Company: {$company}", "Contact: {$contact}",  "Message:", $message];
-       $body = join(PHP_EOL, $bodyParagraphs);
-
-       if (mail($toEmail, $emailSubject, $body, $headers)) 
-
-           header('Location: contacted.html');
-       } else {
-           $errorMessage = 'Oops, something went wrong. Please try again later';
-       }
-
-   } else {
-
-       $allErrors = join('<br/>', $errors);
-       $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-   }
-}
-
-?>
-<html>
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nzube Ufodike</title>
@@ -65,10 +10,13 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <style>
-    body.contact {
+    header{
+      background-color: transparent; 
+    }
   
-  font-family: "Roboto", sans-serif;
-  /* background-color: black; */
+   body.contact, .media-icons.tl{
+    font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(to right, black, #232323ff);
   line-height: 1.9;
   position: relative; }
 
@@ -91,19 +39,19 @@ a {
   margin: 0 auto;
   position: relative;
   top: 80px;
-  background-color: black;
+  
+  /* background-color: black; */
 }
-
+  /* background-color: black; */
+  /* border: 1px solid gray; */
 .container{
   margin: 0 auto;
   position: relative;
   top: 80px;
-  background-color: black;
-
-}
+  border-radius: 25px;}
 
 .col-md-6 .form.h-100{
-  background-color: black;
+  background-color: transparent; 
 }
 
 .heading {
@@ -116,15 +64,18 @@ a {
   padding-left: 0;
   padding-right: 0;
   border-radius: 10;
-  background: none; }
+  background: #000000;
+}
   .form-control:active, .form-control:focus {
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: #000; }
+    border-color: #000; 
+    background-color: white;}
 
+    
 .col-form-label {
-  color: #000;
+  color: black;
   font-size: 13px; }
 
 .btn, .form-control, .custom-select {
@@ -178,8 +129,8 @@ a {
 .contact-wrap .form {
   background: #fff; }
   .contact-wrap .form h3 {
-    color: #35477d;
-    font-size: 20px;
+    color: white;
+    font-size: 35px;
     margin-bottom: 30px; }
 
 .contact-wrap .contact-info {
@@ -197,7 +148,7 @@ a {
     .contact-wrap .contact-info {
       height: 400px !important; } }
   .contact-wrap .contact-info h3 {
-    color: #fff;
+    /* color: #fff; */
     font-size: 20px;
     margin-bottom: 30px; }
 
@@ -229,22 +180,128 @@ label.error {
   color: #000; }
 
   .media-icons.tl{
-    background-color: black;
+    margin-top: 10em;
+    padding-top: 0em;
+    background: transparent;
   }
 
   .media-icons.tl a{
     color: white;
   }
 
-  html {
-  font: 5vmin/1.3 Serif;
-  overflow: hidden;
-  background: #123;
+
+/**************************Moveable backggroound***********/
+/* html, body {
+    background: #000;
+    height: 100%; 
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+} */
+
+/* body.contact{
+  background: black;
+} */
+
+
+.circles{
+  position: absolute;
+  border-radius: 50%;
+  background: grey;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px black;
+}
+
+.small{
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.medium{
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+.large{
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px;
+}
+
+.xlarge{
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px;
+}
+
+.xxlarge{
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  bottom: -500px;
+}
+
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+.shade4{
+  opacity: 0.8;
+}
+
+.shade5{
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
+}
+
+.menu-btn .navigation .navigation-items a{
+  padding-left: 5em;
+  
+}
+
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+    
+/* 
+html {
+
+overflow: hidden;
+background: #123;
 }
 
 body, head {
-  display: block;
-  font-size: 52px;
   color: transparent;
 }
 
@@ -291,7 +348,7 @@ head::after {
   to {
     transform: rotate(360deg) scale(18) translateX(20px);
   }
-}
+} */
 
   </style>
   
@@ -307,11 +364,20 @@ head::after {
           <a href="journey.html">Journey</a>
           <a href="index.html">Home</a>
           <a href="portfolio.html">Portfolio</a>
-          <a href="contact.php">Contact</a>
-          <a href="media.html">Media</a>
+          <a href="contact.html">Contact</a>
+          <a href="news.html">Media</a>
         </div>
       </div>
     </header>
+
+    <div class='ripple-background'>
+      <div class='circles xxlarge shade1'></div>
+      <div class='circles xlarge shade2'></div>
+      <div class='circles large shade3'></div>
+      <div class='circles medium shade4'></div>
+      <div class='circles small shade5'></div>
+    </div>
+      
 
     <div class="contentc">
     
@@ -320,12 +386,11 @@ head::after {
           <div class="col-md-6">
             <div class="form h-100">
               <h3>Get in touch with me</h3>
-              <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
-              <form class="mb-5" method="post" id="contactForm">
+              <form class="mb-5" method="post" id="contact-form" name="contact-form" action="contactform.php">
                 <div class="row">
                   <div class="col-md-6 form-group mb-5">
                     <label for="" class="col-form-label">Name *</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Full name">
                   </div>
                   <div class="col-md-6 form-group mb-5">
                     <label for="" class="col-form-label">Email *</label>
@@ -336,23 +401,23 @@ head::after {
                 <div class="row">
                   <div class="col-md-6 form-group mb-5">
                     <label for="" class="col-form-label">Phone</label>
-                    <input type="text" class="form-control" name="phone" id="phone"  placeholder="Phone #">
+                    <input type="text" class="form-control" name="phone" id="phone"  placeholder="Phone Number">
                   </div>
                   <div class="col-md-6 form-group mb-5">
                     <label for="" class="col-form-label">Company</label>
-                    <input type="text" class="form-control" name="company" id="company"  placeholder="Company  name">
+                    <input type="text" class="form-control" name="company" id="company"  placeholder="Company name (Optional)">
                   </div>
                 </div>
   
                 <div class="row">
                   <div class="col-md-12 form-group mb-5">
-                    <label for="message" class="col-form-label">Message *</label>
+                    <label for="message" class="col-form-label">Message</label>
                     <textarea class="form-control" name="message" id="message" cols="30" rows="4"  placeholder="Write your message"></textarea>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <input type="submit" value="Send Message" class="btn btn-primary rounded-1 py-2 px-4">
+                    <input type="submit" name="submit" value="Send Message" class="btn btn-primary rounded-1 py-2 px-4">
                     <span class="submitting"></span>
                   </div>
                 </div>
@@ -363,8 +428,8 @@ head::after {
             </div>
           </div>
           <div class="col-md-6">
-            <div class="contact-info h-100" style="background-image: url('img/nzube.jpg'); background-size: cover;">
-              <a href="https://www.google.com/maps" target="_blank"></a>
+            <div class="contact-info h-100" style="background-image: url('img/finger.jpg'); background-size: cover; border-radius: 25px">
+      
             </div>
           </div>
         </div>
@@ -379,6 +444,9 @@ head::after {
         <a href="https://twitter.com/nzube?lang=en"><i class="fab fa-twitter"></i></a>
       </div>
       
+      <footer>
+        <p>Copyright All Rights Reserved © 2022</p>
+      </footer>
 
 <script src="home.js"></script>
 
@@ -390,43 +458,43 @@ head::after {
 <script>
 
 
-     const constraints = {
-         name: {
-             presence: { allowEmpty: false }
-         },
-         email: {
-             presence: { allowEmpty: false },
-             email: true
-         },
-         message: {
-             presence: { allowEmpty: false }
-         }
-     };
+  const constraints = {
+      name: {
+          presence: { allowEmpty: false }
+      },
+      email: {
+          presence: { allowEmpty: false },
+          email: true
+      },
+      message: {
+          presence: { allowEmpty: false }
+      }
+  };
 
-     const form = document.getElementById('contact-form');
-     form.addEventListener('submit', function (event) {
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function (event) {
 
-         const formValues = {
-             name: form.elements.name.value,
-             email: form.elements.email.value,
-             message: form.elements.message.value
-         };
+      const formValues = {
+          name: form.elements.name.value,
+          email: form.elements.email.value,
+          message: form.elements.message.value
+      };
 
 
-         const errors = validate(formValues, constraints);
-         if (errors) {
-             event.preventDefault();
-             const errorMessage = Object
-                 .values(errors)
-                 .map(function (fieldValues) {
-                     return fieldValues.join(', ')
-                 })
-                 .join("\n");
+      const errors = validate(formValues, constraints);
+      if (errors) {
+          event.preventDefault();
+          const errorMessage = Object
+              .values(errors)
+              .map(function (fieldValues) {
+                  return fieldValues.join(', ')
+              })
+              .join("\n");
 
-             alert(errorMessage);
-         }
-     }, false);
- </script>
+          alert(errorMessage);
+      }
+  }, false);
+</script>
 
   </body>
 </html>

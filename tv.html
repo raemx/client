@@ -28,7 +28,22 @@
       body{
         padding-top: 5em;
       }
-      
+
+.parallax {
+  /* The image used */
+  background-image: url("img/dark.webp");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
       </style>
 </head>
 
@@ -39,19 +54,20 @@
         <a href="journey.html">Journey</a>
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-        <a href="media2.html">Media</a>
+        <a href="contact.php">Contact</a>
+        <a href="news.html">Media</a>
       </div>
     </div>
   </header>
 
 <body>
     <!-- Topbar Start -->
+    <div class="parallax">
     <div class="container-fluid d-none d-lg-block">
         <div class="row align-items-center  py-3 px-lg-5">
             <div class="col-lg-4">
                 <a href="index.html" class="navbar-brand p-0 d-none d-lg-block">
-                    <h1 class="m-0 display-4 text-uppercase text-primary">Media<span class="text-secondary font-weight-normal">PAGE</span></h1>
+                    <h1 class="m-0 display-4 text-uppercase text-white">Media<span class="text-secondary font-weight-normal">PAGE</span></h1>
                 </a>
             </div>
             <div class="col-lg-8 text-center text-lg-right">
@@ -65,9 +81,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
-            <a href="news.html" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-4 text-uppercase text-primary">Biz<span class="text-white font-weight-normal">News</span></h1>
-            </a>
+         
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -88,14 +102,14 @@
     <div class="container-fluid pt-5 mb-3">
         <div class="container">
             <div class="section-title">
-                <h4 class="m-0 text-uppercase font-weight-bold">Slay Storiez</h4>
+                <h4 class="m-0 text-uppercase font-weight-bold" style="font-size: 2.3em">Slay Storiez</h4>
             </div>
             <div class="section-title " style="align-items: center; padding: 5em;">
                 <h6 class="m-0">Centres and celebrates queer individuals who are championing diversity in their own unique way, while slaying in their lane.
                      As a queer person of colour that occupies diverse spaces, I see a need for greater visibility of diverse voices.</h6>
             </div>
-            <div class="owl-carousel news-carousel carousel-item-4 position-relative">
-                <div class="position-relative overflow-hidden" style="height: 300px;">
+            <div class="owl-carousel news-carousel carousel-item-4 position-relative" >
+                <div class="position-relative overflow-hidden" style="height: 300px; border-radius: 25px;">
                     <img class="img-fluid h-100" src="img/e12.png" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-2">
@@ -104,7 +118,7 @@
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://www.youtube.com/watch?v=MQKzX3EBhSw&list=PL98fLRB01JiOSRV4SPY4xwvaO_PlPddwm&index=13">SO1 E12 Coming Out Storiez</a>
                     </div>
                 </div>
-                <div class="position-relative overflow-hidden" style="height: 300px;">
+                <div class="position-relative overflow-hidden" style="height: 300px; border-radius: 25px;">
                     <img class="img-fluid h-100" src="img/e11.png" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-2">
@@ -114,7 +128,7 @@
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://www.youtube.com/watch?v=ptn0T_ldg9k&list=PL98fLRB01JiOSRV4SPY4xwvaO_PlPddwm&index=12">SO1 E11 Acting ad Writing</a>
                     </div>
                 </div>
-                <div class="position-relative overflow-hidden" style="height: 300px;">
+                <div class="position-relative overflow-hidden" style="height: 300px; border-radius: 25px;">
                     <img class="img-fluid h-100" src="img/e10.png" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-2">
@@ -125,7 +139,7 @@
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://www.youtube.com/watch?v=YC9ethfHTOg&list=PL98fLRB01JiOSRV4SPY4xwvaO_PlPddwm&index=11">SO1 E10 Acceptance and Protection</a>
                     </div>
                 </div>
-                <div class="position-relative overflow-hidden" style="height: 300px;">
+                <div class="position-relative overflow-hidden" style="height: 300px; border-radius: 25px;">
                     <img class="img-fluid h-100" src="img/e09.png" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-2">
@@ -136,7 +150,7 @@
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="https://www.youtube.com/watch?v=Yjz9C1B0nBw&list=PL98fLRB01JiOSRV4SPY4xwvaO_PlPddwm&index=10">SO1 E09 Activism</a>
                     </div>
                 </div>
-                <div class="position-relative overflow-hidden" style="height: 300px;">
+                <div class="position-relative overflow-hidden" style="height: 300px; border-radius: 25px;">
                     <img class="img-fluid h-100" src="img/eo8.png" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-2">
@@ -153,12 +167,6 @@
     </div>
     <!-- Featured News Slider End -->
 
-                
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- News With Sidebar End -->
 
 
     <!-- Footer Start -->
@@ -166,7 +174,7 @@
     <!-- <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
 		<p>Inspired by HTML Codex</p>
     </div> -->
-    <div class="media-icons">
+    <div class="media-icons n">
         <a href="https://uk.linkedin.com/in/nzube"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.instagram.com/nzube.inclusive/?hl=en"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com/nzube?lang=en"><i class="fab fa-twitter"></i></a>
